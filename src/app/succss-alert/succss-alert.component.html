@@ -1,1 +1,27 @@
+<div style="text-align: center;">
 <h2 class="success">succss-alert works!</h2>
+<div>
+    <p>{{ id }}</p> 
+    <p>{{ status }}</p>
+</div>
+<div>
+    <button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+</div>
+<br>
+<br>
+<div>
+    <button class="btn btn-primary" (click)="eventBind()">Click Bind</button>
+</div>
+
+
+<div>{{eventBinding}}</div>
+
+
+<input type="text" class="form-control" (input)="passingAndUsingDataEvent($event)">
+{{serverName}}
+<!--$event - to fetch the event data -->
+<br>
+<!--Two way Data Binding-->
+<input type="text" class="form-control" [(ngModel)]="serverName">
+{{serverName}}
+</div>
