@@ -1,0 +1,14 @@
+<div class="container" style="padding-top: 20px;">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <button class="btn btn-primary" (click)="onToggleDetails()">Disaplay Details</button>
+            <p *ngIf="showSecret">Secrate password = tuna</p>
+
+            <div *ngFor="let logItem of log"
+                [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'trasparent'}"
+                [ngClass]="{'white-text': logItem >= 5}"
+            >{{ logItem }}</div>
+        </div>
+    </div>
+</div>
